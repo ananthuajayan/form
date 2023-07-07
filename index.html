@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="img/ship.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title> Employee form </title>
+</head>
+<body>
+        <div class="wrapper">
+            <div class="main-left">
+                <div class="main-left-header">
+                    <h4 class="font-default">Employee</h4>
+                    <h4 class="font-change">Management</h4>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li> <i class="fa-sharp fa-solid fa-house-chimney"></i>Dashboard</li>
+                        <li> <i class="fa-sharp fa-solid fa-chart-simple"></i>Employees</li>
+                        <li> <i class="fa-sharp fa-solid fa-user"></i>My Profile</li>
+                        <li> <i class="fa-sharp fa-solid fa-lock"></i>Log out</li>
+
+                    </ul>
+                </div>
+                <div class="left-footer">
+                    <h4>powered by</h4>
+                    <div class="footer-image">
+                        <img src="img/image 1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="main-right">
+                <div class="main-right-header">
+                    <div class="sub-header">
+                    <h5 class="dashboard">Dashboard/Employees</h5>
+                    <h5 class="header-employee">Employees</h5>
+                    </div>
+                    <div class="google">
+                        <input type="search" id="site-search" placeholder="Search">
+                        <i class="fa fa-sharp fa-light fa-magnifying-glass"></i>
+                        <i class="fa-sharp fa-regular fa-bell"></i>
+                        <div class="avatar">
+                            <img src="img/Avatar.png" alt="Women">
+                        </div>
+                    </div>
+                    <br clear="all">  
+                </div>
+                <div class="employee-details">
+                   <div class="table-heading">
+                    <div class="sub-heading">
+                    <h4 class="emp-list">Employees List</h4>
+                    <select class="selecter">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                      </select>
+                      <h6>of 10</h6>
+                    </div>
+                    <div class="add-header">
+                        <button type="button" class="btn btn-primary click"> Add Employee</button>
+                    </div>
+                   </div>
+                   <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Sl.No</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">DOB</th>
+                            <th scope="col">Country</th>
+                            <th scope="col"></th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">#01</th>
+                                <td class="zero">
+                                    <div class="pic-setter">
+                                        <img src="img/Rectangle 346.png" alt="">
+                                    </div>
+                                    Mr.Micheal Johnson
+                                </td>
+                            <td>michaeljohnson@example.com</td>
+                            <td>5551234567</td>
+                            <td>Male</td>
+                            <td>10 December 1985</td>
+                            <td>USA</td>
+                            <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">#02</th>
+                                <td class="zero">
+                                    <div class="pic-setter">
+                                        <img src="img/Rectangle 346.png" alt="">
+                                    </div>
+                                    Mr.Micheal Johnson
+                                </td>
+                            <td>emilywilson@example.com</td>
+                            <td>9998765432</td>
+                            <td>Female</td>
+                            <td>10 August 1992</td>
+                            <td>Canada</td>
+                            <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">#03</th>
+                                <td class="zero">
+                                    <div class="pic-setter">
+                                        <img src="img/Rectangle 346.png" alt="">
+                                    </div>
+                                    Mr.Micheal Johnson
+                                </td>                            <td>davidbrown@example.com</td>
+                            <td>2788945521</td>
+                            <td>Female</td>
+                            <td>12 May 1990</td>
+                            <td>Japan</td>
+                            <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">#04</th>
+                                <td class="zero">
+                                    <div class="pic-setter">
+                                        <img src="img/Rectangle 346.png" alt="">
+                                    </div>
+                                    Mr.Micheal Johnson
+                                </td>                            <td>michaeljohnson@example.com</td>
+                            <td>5551234567</td>
+                            <td>Male</td>
+                            <td>22 September 1988</td>
+                            <td>India</td>
+                            <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">#05</th>
+                                <td class="zero">
+                                    <div class="pic-setter">
+                                        <img src="img/Rectangle 346.png" alt="">
+                                    </div>
+                                    Mr.Micheal Johnson
+                                </td>                            <td>millyjohnson@example.com</td>
+                            <td>7638492034</td>
+                            <td>Female</td>
+                            <td>06 January 1994</td>
+                            <td>USA</td>
+                            <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">#06</th>
+                                <td class="zero">
+                                    <div class="pic-setter">
+                                        <img src="img/Rectangle 346.png" alt="">
+                                    </div>
+                                    Mr.Micheal Johnson
+                                </td>                            <td>azeemzai@example.com</td>
+                            <td>5551234567</td>
+                            <td>Male</td>
+                            <td>27 April 1987</td>
+                            <td>USA</td>
+                            <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">#07</th>
+                                <td class="zero">
+                                    <div class="pic-setter">
+                                        <img src="img/Rectangle 346.png" alt="">
+                                    </div>
+                                    Mr.Ananthu Ajayan
+                                </td>                            <td>ananthu.stackup@example.com</td>
+                            <td>8921985889</td>
+                            <td>Male</td>
+                            <td>14 October 1993</td>
+                            <td>UAE</td>
+                            <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">#08</th>
+                                <td class="zero">
+                                    <div class="pic-setter">
+                                        <img src="img/Rectangle 346.png" alt="">
+                                    </div>
+                                    Mr.Micheal Johnson
+                                </td>                            <td>michaeljohnson@example.com</td>
+                            <td>9876543210</td>
+                            <td>Female</td>
+                            <td>24 June 1992</td>
+                            <td>India</td>
+                            <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">#09</th>
+                                <td class="zero">
+                                    <div class="pic-setter">
+                                        <img src="img/Rectangle 346.png" alt="">
+                                    </div>
+                                    Mr.Micheal Johnson
+                                </td>   
+                             <td>michaeljohnson@example.com</td>
+                            <td>5551234567</td>
+                            <td>Male</td>
+                            <td>10 December 1985</td>
+                            <td>USA</td>
+                            <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
+                          </tr>
+                          <tr>
+                            <td scope="row">#10</th>
+                                <td class="zero">
+                                    <div class="pic-setter">
+                                        <img src="img/Rectangle 346.png" alt="">
+                                    </div>
+                                    Mr.Micheal Johnson
+                                </td>                            <td>michaeljohnson@example.com</td>
+                            <td>5551234567</td>
+                            <td>Male</td>
+                            <td>10 December 1985</td>
+                            <td>USA</td>
+                            <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                   </div>
+
+                   <div aria-label="Page navigation example">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item"><a class="page-link" href="#">6</a></li>
+                      <li class="page-item"><a class="page-link" href="#">7</a></li>
+
+                    </ul>
+                </div>
+                  <div class="right-footer">
+                    <h6> @ 2023 All Rights Reserved. Stack Up</h6>
+                    <div class="right-sub-footer">
+                        <h5>Terms of Use</h5>
+                        <h5>Privacy Policy</h5>
+                    </div>
+
+                  </div>
+            </div>
+            </div>
+
+            <!-- new employee form starts here -->
+            
+      
+                <div class="row sec size">
+                    <div class="col bg-white col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                      <div class="card-header"> Basic Details </div>
+                      <div class="card"> 
+                        <div class="card-body">
+                          <input class="file" type="file">
+                        </div>
+                        <div class="icon">
+                          <i class="fa-solid fa-arrow-up"></i>
+                         <h2>Upload Image</h2>
+                          <h1>PNG, JPG files are allowed</h1>
+                        </div> 
+                      </div>
+         
+                     
+                      <div class="row sec">
+        
+                        <div class="col-3">
+                          <label for="">Salutation <span>*</span></label>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Select</option>
+                            <option value="1">Mr</option>
+                            <option value="2">Mrs</option>
+                            <option value="3">Ms</option>
+                          </select>
+                        </div>
+                        
+                          <div class="col">
+                            <label for="">First Name <span>*</span></label>
+                            <input type="text" class="form-control" placeholder="first name"  aria-label="First name">
+                          </div>
+                          <div class="col">
+                            <label for="">Second Name <span>*</span></label>
+                            <input type="text" class="form-control" placeholder="second name" aria-label="Last name">
+                          </div>
+                        </div>
+                       <div class="row sec">
+                        <div class="col">
+                          <label for="inputEmail4" class="form-label">Email <span>*</span></label>
+                          <input type="email" class="form-control" placeholder="ananthu@gmail.com" id="inputEmail4">
+                        </div>
+                        <div class="col">
+                          <label for="inputtel4" class="form-label">Mobile Number <span>*</span></label>
+                          <input type="tel" class="form-control" placeholder=" Enter mobile Number" id="inputtel4">
+                        </div>
+                       </div>
+        
+                       <div class="row sec">
+                        <div class="col">
+                          <label for="inputdate4" class="form-label">DOB <span>*</span></label>
+                          <input type="date" class="form-control" placeholder="enter DOB" id="inputdate4">
+                        </div>
+                        <div class="col imp radio">
+                          <div class="row ">
+                              <label for="exampleInputEmail1" class="form-label imp">Gender<span class="text-danger">*</span></label>
+                              <div class="col cube">
+                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"checked>male
+                                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >female      
+                                  <!-- <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >Other       -->
+        
+                              </div>
+                          </div>
+                          
+                      </div>
+                       </div>
+                      
+                       
+                       <form class="row sec">
+                        
+                        <div class="col-12">
+                          <label for="inputAddress" class="form-label">Address <span>*</span></label>
+                          <input type="text" class="form-control" id="inputAddress" placeholder="Enter Adress">
+                        </div>
+                        </form>
+                      
+                        <div class="row sec">
+                          <div class="col">
+                            <label for="">Country <span>*</span></label>
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected>Select</option>
+                              <option value="1">India</option>
+                              <option value="2">Kenya</option>
+                              <option value="3">America</option>
+                            </select>
+                          </div>
+                            <div class="col">
+                              <label for="">State <span>*</span></label>
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Select</option>
+                                <option value="1">kerala</option>
+                                <option value="2">tamil nadu</option>
+                                <option value="3">Bangalore</option>
+                              </select>
+                            
+                          </div>
+        
+                        </div>
+                        
+                        <div class="row sec">
+                          <div class="col">
+                            <label for="">City <span>*</span></label>
+                            <input type="text" class="form-control" placeholder="enter city"  aria-label="First name">
+                          </div>
+                          <div class="col">
+                            <label for="">Pin/Zip <span>*</span></label>
+                            <input type="text" class="form-control" placeholder="enter pin/zip" aria-label="Last name">
+                          </div>
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button class="btn btn-primary me-md-2" type="button">Cancel</button>
+                            <button class="btn btn-primary" type="button">Save Changes</button>
+                          </div>
+                      </div>
+                      
+                      </div>
+        
+                    
+
+ <!-- ------------------------------------<br>----------------------------- -->
+               
+      
+    <div class="row sec size">
+        <div class="col bg-white  ">
+          <div class="card-header"> Employee Details </div>
+          <div class="row sec">
+            <div class="col-3 image-display">
+                <div class="employee-edit-form"> 
+                 <img src="img/kannadi.png" alt="">
+                </div>
+                <div class="change">Change</div>
+              </div>
+          </div>
+       
+
+         
+          <div class="row sec">
+
+            <div class="col-3">
+              <label for="">Salutation <span>*</span></label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Select</option>
+                <option value="1">Mr</option>
+                <option value="2">Mrs</option>
+                <option value="3">Ms</option>
+              </select>
+            </div>
+            
+              <div class="col">
+                <label for="">First Name <span>*</span></label>
+                <input type="text" class="form-control" placeholder="first name"  aria-label="First name">
+              </div>
+              <div class="col">
+                <label for="">Second Name <span>*</span></label>
+                <input type="text" class="form-control" placeholder="second name" aria-label="Last name">
+              </div>
+            </div>
+           <div class="row sec">
+            <div class="col">
+              <label for="inputEmail4" class="form-label">Email <span>*</span></label>
+              <input type="email" class="form-control" placeholder="ananthu@gmail.com" id="inputEmail4">
+            </div>
+            <div class="col">
+              <label for="inputtel4" class="form-label">Mobile Number <span>*</span></label>
+              <input type="tel" class="form-control" placeholder=" Enter mobile Number" id="inputtel4">
+            </div>
+           </div>
+
+           <div class="row sec">
+            <div class="col">
+              <label for="inputdate4" class="form-label">DOB <span>*</span></label>
+              <input type="date" class="form-control" placeholder="enter DOB" id="inputdate4">
+            </div>
+            <div class="col imp radio">
+              <div class="row ">
+                  <label for="exampleInputEmail1" class="form-label imp">Gender<span class="text-danger">*</span></label>
+                  <div class="col cube">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"checked>male
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >female      
+                      <!-- <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >Other       -->
+
+                  </div>
+              </div>
+              
+          </div>
+           </div>
+          
+           
+           <form class="row sec">
+            
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Address <span>*</span></label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="Enter Adress">
+            </div>
+            </form>
+          
+            <div class="row sec">
+              <div class="col">
+                <label for="">Country <span>*</span></label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Select</option>
+                  <option value="1">India</option>
+                  <option value="2">Kenya</option>
+                  <option value="3">America</option>
+                </select>
+              </div>
+                <div class="col">
+                  <label for="">State <span>*</span></label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select</option>
+                    <option value="1">kerala</option>
+                    <option value="2">tamil nadu</option>
+                    <option value="3">Bangalore</option>
+                  </select>
+                
+              </div>
+
+            </div>
+            
+            <div class="row sec">
+              <div class="col">
+                <label for="">City <span>*</span></label>
+                <input type="text" class="form-control" placeholder="enter city"  aria-label="First name">
+              </div>
+              <div class="col">
+                <label for="">Pin/Zip <span>*</span></label>
+                <input type="text" class="form-control" placeholder="enter pin/zip" aria-label="Last name">
+              </div>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" type="button">Cancel</button>
+                <button class="btn btn-primary" type="button">Save Changes</button>
+              </div>
+          
+          </div>
+
+        
+    </div>
+
+
+</body>
+</html>
