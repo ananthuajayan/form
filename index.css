@@ -10,16 +10,14 @@
 img,.full{
     width: 100%;
 }
-.wrapper{
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    
-}
 .main-left{
     background: linear-gradient(149.96deg, #301F81 12.51%, #0F0441 89.53%);
     color:  #FFFFFF;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    z-index: 1000;
 }
 .font-default{
     font-size: 23px;
@@ -52,15 +50,20 @@ img,.full{
     padding: 15px 15px 15px 15px;
     display: flex;
     flex-direction: column;
-    display: flex;
     width: 100%;
+    padding-left: 260px;
 }
 .main-right-header{
     margin-bottom: 30px;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
 }
-.sub-header{
-    float: left;
-}
+
 .google{
     display: flex;
     float: right;
@@ -68,6 +71,7 @@ img,.full{
     padding: 10px;
     border-radius: 30px;
     position: relative;
+    border: 3px solid #F4F7FE;
 }
 .fa-magnifying-glass{
     position: absolute;
@@ -117,7 +121,7 @@ img,.full{
     background-color: #FFFFFF;
     border-radius: 10px;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 120px 0px 20px 10px;
 }
 .selecter{
     padding: 8px 15px 8px 15px;
@@ -140,7 +144,7 @@ img,.full{
 }
 .table tr td{
     color:var(--primary-color);
-    font-weight: 500;
+    font-weight: 700;
     font-size: 14px;   
     border-bottom: unset !important;
 }
@@ -430,8 +434,118 @@ h1{
 body{
     margin: auto;
 }
-
-
+.container{
+    max-width: 800px;
+    display: none;
+}
+.form-modal{
+    max-width: 500px;
+    margin: auto;
+    background-color: #707EAE;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    display: none;
+}
+.sub-main-right{
+    display: none;
+}
+.delete-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cross-icon{
+    width: 24px;
+    height: 24px;
+    background-color: #FAF9FF;
+    color: #4318FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.delete-head h4{
+    font-weight: 700;
+    font-size: 24px;
+    color: #2B3674;
+}
+.form-modal p{
+    font-weight: 500;
+    font-size: 15px;
+    color: #2B3674;
+    flex: 1;
+}
+.delete-button{
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+.employee-deletion-form{
+    max-width: 800px;
+    margin: auto;
+}
+.employee-img{
+    width: 119px;
+    height: 119px;
+    border-radius: 30px;
+    position: absolute;
+    padding: 10px;
+    bottom: -35px;
+    left: calc(50% - 51px);
+}
+.sub-deletion-form{
+    position: relative;
+    bottom: 10px;
+}
+.employee-name{
+    text-align: center;
+    margin-top: 30px;
+}
+.employee-name h5{
+    font-size: 20px;
+    font-weight: 700;
+    color: #2B3674;
+}
+.employee-name p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #707EAE;
+}
+.form-coloumn{
+ box-shadow: 0px 18px 40px 0px #161c231f;
+ border-radius: 10px;
+ padding: 15px;
+}
+.form-coloumn h6{
+   font-size: 14px;
+   font-weight: 500;
+   color: #707EAE;
+}
+.form-coloumn h5{
+    font-size: 16px;
+    font-weight: 500;
+    color: #2B3674;
+ }
+ .form-g{
+    margin: 30px 0px;
+ }
+ .employee-deletion-form{
+    margin-bottom: 50px;
+ }
+ .fa-bars, label,#checking{
+    position: fixed;
+    right: 0px;
+    top: 40px;
+    z-index: 1000;
+    visibility: hidden;
+ }
+ #checking{
+    display: none;
+ }
 
 
 
@@ -447,6 +561,82 @@ body{
         width: 100%;
         display: flex;
     }
+
+    
+ }
+ @media screen and (max-width:950px) {
+    .main-left{
+        width: 100%;
+        visibility: hidden;
+    }
+    .main-right{
+        padding-left: unset;
+    }
+    .list{
+        text-align: center;
+    }
+    .list li{
+        padding-left: unset;
+        font-size: 15px;
+        line-height: 50px;
+    }
+    .fa-sharp{
+        font-size: 15px;
+    }
+    .left-footer{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .main-left-header{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .font-change,.font-default{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .main-right-header{
+        padding: 15px 50px 15px 15px;
+    }
+    .right-footer{
+        padding-left: 15px;
+    }
+    
+    #checking:checked ~ .main-left{
+
+        visibility: visible;
+        z-index: 1;
+
+    }
+    .fa-bars{
+    visibility: visible;
+    }
+    
+ }
+ @media screen and (max-width:680px) {
+  .main-right-header{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-right: 20px;
+  }
+  .employee-details{
+    margin-top: 200px;
+  }
+  .avatar{
+    display: none;
+  }
+.google{
+    display: flex;
+}
+  #site-search{
+    width: 100%;
+  }
+    
+ }
  }
 
 
