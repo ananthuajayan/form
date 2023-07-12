@@ -10,10 +10,12 @@ fetch("http://localhost:3000/employees")
 const table = document.getElementById("table-back");
 table.innerHTML = "";
  
+var i=1;
     employ.forEach((employ) => {
     var people = table.insertRow();
     var slno = people.insertCell(); 
-    slno.innerHTML = "01";
+    slno.innerHTML = i;
+    
 
     var name = people.insertCell();
     name.innerHTML = employ.firstName +" "+ employ.lastName;
@@ -35,6 +37,8 @@ table.innerHTML = "";
 
     var dot = people.insertCell(); 
     dot.innerHTML = "...";
+
+    i++;
 });
 
 })

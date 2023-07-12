@@ -54,8 +54,6 @@ img,.full{
     padding-left: 260px;
 }
 .main-right-header{
-    margin-bottom: 30px;
-    position: fixed;
     background-color: white;
     width: 100%;
     top: 0;
@@ -121,7 +119,7 @@ img,.full{
     background-color: #FFFFFF;
     border-radius: 10px;
     padding: 10px;
-    margin: 120px 0px 20px 10px;
+    margin-top: 30px;
 }
 .selecter{
     padding: 8px 15px 8px 15px;
@@ -215,6 +213,15 @@ img,.full{
     color: #707EAE;
     padding-top: 10px;
 }
+.modal-header{
+    border-bottom: none;
+}
+.modal-body{
+    padding: unset;
+}
+.modal-footer{
+    border-top: unset;
+}
 
 
 
@@ -243,6 +250,10 @@ img,.full{
 .justify-content-md-end{
     margin-top: 1rem;
 }
+.pagination{
+    margin-top: 20px;
+}
+
 
 .card-header{
     margin-bottom: 10px;
@@ -436,7 +447,7 @@ body{
 }
 .container{
     max-width: 800px;
-    display: none;
+    /* display: none; */
 }
 .form-modal{
     max-width: 500px;
@@ -447,10 +458,10 @@ body{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    display: none;
+    /* display: none; */
 }
 .sub-main-right{
-    display: none;
+    /* display: none; */
 }
 .delete-head{
     display: flex;
@@ -487,6 +498,7 @@ body{
 .employee-deletion-form{
     max-width: 800px;
     margin: auto;
+    margin-top: 75px;
 }
 .employee-img{
     width: 119px;
@@ -536,7 +548,7 @@ body{
  .employee-deletion-form{
     margin-bottom: 50px;
  }
- .fa-bars, label,#checking{
+ .fa-bars,.label, #checking{
     position: fixed;
     right: 0px;
     top: 40px;
@@ -551,9 +563,7 @@ body{
 
 
 @media screen and (max-width:1200px) {
-    .row{
-        display: grid;
-    }
+   
     .bg-white{
         width: 100%;
     }
