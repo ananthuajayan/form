@@ -1,4 +1,4 @@
-console.log("good morning");
+
 
 fetch("http://localhost:3000/employees")
 .then((res) => res.json())
@@ -35,11 +35,18 @@ var i=1;
     var country = people.insertCell();
     country.innerHTML = employ.country;
 
-    var dot = people.insertCell(); 
-    dot.innerHTML = "...";
-
+    var dot = people.insertCell();
+    dot.innerHTML = `<button class="dotted-icon" onclick = "button(event)"><i class="fa-solid fa-ellipsis"></i></button>
+    <div id="last">
+        <button class="action" onclick="view();"><i class="fa fa-sharp fa-light fa-eye" id="buttonDropdown_action"></i>view</button>
+        <button class="action" onclick="edit();"><i class="fa fa-sharp fa-light fa-pen" id="buttonDropdown_action"></i>edit</button>
+        <button class="action" onclick="delete()";><i class="fa fa-sharp fa-light fa-trash" id="buttonDropdown_action"></i>delete</button>
+        </div>` 
+     
+    
+    
     i++;
-});
+}); 
 
 })
 

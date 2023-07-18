@@ -170,10 +170,11 @@ img,.full{
     height: 32px;
     width: 32px;
 }
-.dotted-icon i{
-  padding: 10px;
+.dotted-icon{
+  padding: 0px 5px;
   background-color: aliceblue;
   border-radius: 10px;
+  border: 1px solid rgb(56, 89, 89);
 }
 .table tr:last-child{
     border-bottom: none;
@@ -558,10 +559,23 @@ body{
  #checking{
     display: none;
  }
+ .bg-white{
+    width: 100% !important;
+ }
+ #last{
+    position:absolute ;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: white;
+    z-index: 1;
+    border-radius: 5px;
+ }
+ .action{
+    border: none;
+    background-color: transparent;
 
-
-
-
+ }
 @media screen and (max-width:1200px) {
    
     .bg-white{
@@ -570,9 +584,7 @@ body{
     .raw{
         width: 100%;
         display: flex;
-    }
-
-    
+    }  
  }
  @media screen and (max-width:950px) {
     .main-left{
@@ -615,12 +627,10 @@ body{
     .right-footer{
         padding-left: 15px;
     }
-    
     #checking:checked ~ .main-left{
 
         visibility: visible;
         z-index: 1;
-
     }
     .fa-bars{
     visibility: visible;
@@ -647,7 +657,7 @@ body{
   }
     
  }
- }
+ 
 
 
 
