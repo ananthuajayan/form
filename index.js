@@ -42,12 +42,12 @@ var i=1;
         <button class="action" onclick="edit();"><i class="fa fa-sharp fa-light fa-pen" id="buttonDropdown_action"></i>edit</button>
         <button class="action" onclick="delete()";><i class="fa fa-sharp fa-light fa-trash" id="buttonDropdown_action"></i>delete</button>
         </div>` 
-     
-    
-    
     i++;
 }); 
 
 })
+function button(){
+    document.querySelector('#last').style.visibility = "visible";
+}
 
 

@@ -570,6 +570,7 @@ body{
     background-color: white;
     z-index: 1;
     border-radius: 5px;
+    visibility: hidden;
  }
  .action{
     border: none;

@@ -1,121 +1,90 @@
-var fName = document.forms["modal"]["firstname"];
-var sName = document.forms["modal"]["secondname"];
-var userName = document.forms["modal"]["username"];
-var password = document.forms["modal"]["password"];
-var email = document.forms["modal"]["inputEmail4"];
-var phone = document.forms["modal"]["inputtel4"];
-var date = document.forms["modal"]["inputdate4"];
-var Adress = document.forms["modal"]["inputAddress"];
-var qualifications = document.forms["modal"]["qualifications"];
-var country = document.forms["modal"]["country"];
-var state = document.forms["modal"]["state"];
-var city = document.forms["modal"]["city"];
-var pin = document.forms["modal"]["pin"];
+// var fName = document.forms["modal"]["firstname"];
+// var sName = document.forms["modal"]["secondname"];
+// var userName = document.forms["modal"]["username"];
+// var password = document.forms["modal"]["password"];
+// var email = document.forms["modal"]["inputEmail4"];
+// var phone = document.forms["modal"]["inputtel4"];  var phoneRegx = /^[7-9][0-9]{9}$/;
+// var date = document.forms["modal"]["inputdate4"];
+// var Adress = document.forms["modal"]["inputAddress"]; var addressRegx = (/^[A-Za-z0-9]/);
+// var qualifications = document.forms["modal"]["qualifications"];
+// var country = document.forms["modal"]["country"];
+// var state = document.forms["modal"]["state"];
+// var city = document.forms["modal"]["city"];
+// var pin = document.forms["modal"]["pin"]; 
 
 function validate(){
-    if(fName.value==""){
-        fName.style.border = "1px solid red"
-        fName.focus();
-        return false;
+    var fName = document.getElementById("firstname").value;
+    var regfName =  (/^[A-Za-z]/);
+    if(regfName.test(fName)){
+        document.getElementById("firstname").style.border= "1px solid green";
     }else{
-        fName.style.border = "1px solid green"
-    }
-    if(sName.value==""){
-        sName.style.border = "1px solid red"
-        sName.focus();
-        return false;
-    }
-    else{
-        sName.style.border = "1px solid green"
-    }
-    if(userName.value==""){
-        userName.style.border = "1px solid red"
-        userName.focus();
-        return false;
-    }  else{
-        userName.style.border = "1px solid green"
-    }
-    if(password.value==""){
-        password.style.border = "1px solid red"
-        password.focus();
-        return false;
-    }  else{
-        password.style.border = "1px solid green"
-    }
-    if(email.value==""){
-        email.style.border = "1px solid red"
-        email.focus();
-        return false;
-    }  else{
-        email.style.border = "1px solid green"
-    }
-    if(phone.value==""){
-        inputtel4.style.border = "1px solid red"
-        inputtel4.focus();
-        return false;
-    }  else{
-        phone.style.border = "1px solid green"
-    }
-    if(date.value==""){
-        date.style.border = "1px solid red"
-        date.focus();
-        return false;
-    }  else{
-        date.style.border = "1px solid green"
+        document.getElementById("firstname").style.border= "1px solid red";
+        document.getElementById("firstname").focus();
     }
 
-    if(Adress.value==""){
-        Adress.style.border = "1px solid red"
-        Adress.focus();
-        return false;
-    }  else{
-        Adress.style.border = "1px solid green"
-    }
-   
-    if(qualifications.value==""){
-        qualifications.style.border = "1px solid red"
-        qualifications.focus();
-        return false;
-    }  else{
-        qualifications.style.border = "1px solid green"
-    }
-    if(country.value==""){
-        country.style.border = "1px solid red"
-        country.focus();
-        return false;
-    }  else{
-        country.style.border = "1px solid green"
-    }
-    if(state.value==""){
-        state.style.border = "1px solid red"
-        state.focus();
-        return false;
-    }  else{
-        state.style.border = "1px solid green"
-    }
-    if(city.value==""){
-        city.style.border = "1px solid red"
-        city.focus();
-        return false;
-    }  else{
-        city.style.border = "1px solid green"
-    }
-    if(pin.value==""){
-        pin.style.border = "1px solid red"
-        pin.focus();
-        return false;
-    }  else{
-        pin.style.border = "1px solid green"
+    var sName = document.getElementById("secondname").value;
+    var regsName =  (/^[A-Za-z]/);
+    if(regsName.test(sName)){
+        document.getElementById("secondname").style.border= "1px solid green";
+    }else{
+        document.getElementById("secondname").style.border= "1px solid red";
+        document.getElementById("secondname").focus();
     }
 
+    var userName = document.getElementById("username").value;
+    var  regusername = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})$/;
+    if(regusername.test(userName)){
+        document.getElementById("username").style.border= "1px solid green";
+    }else{
+        document.getElementById("username").style.border= "1px solid red";
+        document.getElementById("username").focus();
+    }
+    
+    var password = document.getElementById("password").value;
+    if(password==""){
+        document.getElementById("password").style.border= "1px solid red";
+        document.getElementById("password").focus();
+    }else{
+        document.getElementById("password").style.border= "1px solid green";
+        
+    }
 
-    var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
-var name = document.getElementById('fName').value;
-if(!regName.test(name)){
-    alert('Invalid name given.');
-}else{
-    alert('Valid name given.');
-}
+    var email = document.getElementById("inputEmail4").value;
+    var regemail = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})$/;
+    if(regemail.test(email)){
+        document.getElementById("inputEmail4").style.border= "1px solid green";
+    }else{
+        document.getElementById("inputEmail4").style.border= "1px solid red";
+        document.getElementById("inputEmail4").focus();
+    }
+
+    var phone = document.getElementById("inputtel4").value;
+    var regphone = /^[7-9][0-9]{9}$/;
+    if(regphone.test(phone)){
+        document.getElementById("inputtel4").style.border= "1px solid green";
+    }else{
+        document.getElementById("inputtel4").style.border= "1px solid red";
+        document.getElementById("inputtel4").focus();
+    }
+
+    var date = document.getElementById("inputdate4").value;
+    if(date==""){
+        document.getElementById("inputdate4").style.border= "1px solid red";
+        document.getElementById("inputdate4").focus();
+    }else{
+        document.getElementById("inputdate4").style.border= "1px solid green";
+        
+    }
+
+    var Address = document.getElementById("inputAddress").value;
+    var regaddress = (/^[A-Za-z0-9]/);
+    if(regaddress.test(Address)){
+        document.getElementById("inputAddress").style.border= "1px solid green";
+    }else{
+        document.getElementById("inputAddress").style.border= "1px solid red";
+        document.getElementById("inputAddress").focus();
+    }
+
 }
 
 
