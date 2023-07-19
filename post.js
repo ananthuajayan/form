@@ -6,7 +6,7 @@
 // var phone = document.forms["modal"]["inputtel4"];  var phoneRegx = /^[7-9][0-9]{9}$/;
 // var date = document.forms["modal"]["inputdate4"];
 // var Adress = document.forms["modal"]["inputAddress"]; var addressRegx = (/^[A-Za-z0-9]/);
-// var qualifications = document.forms["modal"]["qualifications"];
+// var qualifications = document.forms["modal"]["qualifications"]; var qulificationRegx = (/^[A-Za-z0-9]/);
 // var country = document.forms["modal"]["country"];
 // var state = document.forms["modal"]["state"];
 // var city = document.forms["modal"]["city"];
@@ -20,6 +20,7 @@ function validate(){
     }else{
         document.getElementById("firstname").style.border= "1px solid red";
         document.getElementById("firstname").focus();
+        return false; 
     }
 
     var sName = document.getElementById("secondname").value;
@@ -85,6 +86,32 @@ function validate(){
         document.getElementById("inputAddress").focus();
     }
 
+    var qualifications = document.getElementById("qualifications").value;
+    var regqulification = (/^[A-Za-z0-9]/);
+    if(regqulification.test(qualifications)){
+        document.getElementById("qualifications").style.border= "1px solid green";
+    }else{
+        document.getElementById("qualifications").style.border= "1px solid red";
+        document.getElementById("qualifications").focus();
+    }
+
+    var city = document.getElementById("city").value;
+    var regcity =  (/^[A-Za-z]/);
+    if(regcity.test(city)){
+        document.getElementById("city").style.border= "1px solid green";
+    }else{
+        document.getElementById("city").style.border= "1px solid red";
+        document.getElementById("city").focus();
+    }
+
+    var pin = document.getElementById("pin").value;
+    if(pin==""){
+        document.getElementById("pin").style.border= "1px solid red";
+        document.getElementById("pin").focus();
+    }else{
+        document.getElementById("pin").style.border= "1px solid green";
+        
+    }
 }
 
 

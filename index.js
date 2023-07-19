@@ -36,18 +36,20 @@ var i=1;
     country.innerHTML = employ.country;
 
     var dot = people.insertCell();
-    dot.innerHTML = `<button class="dotted-icon" onclick = "button(event)"><i class="fa-solid fa-ellipsis"></i></button>
-    <div id="last">
-        <button class="action" onclick="view();"><i class="fa fa-sharp fa-light fa-eye" id="buttonDropdown_action"></i>view</button>
-        <button class="action" onclick="edit();"><i class="fa fa-sharp fa-light fa-pen" id="buttonDropdown_action"></i>edit</button>
-        <button class="action" onclick="delete()";><i class="fa fa-sharp fa-light fa-trash" id="buttonDropdown_action"></i>delete</button>
-        </div>` 
+    dot.innerHTML = `<div class="dropdown">
+    <button class="btn dropdown-toggle dotted-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
+    
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#"><i class="fa fa-sharp fa-light fa-eye" id="buttonDropdown_action"></i>view</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa fa-sharp fa-light fa-pen" id="buttonDropdown_action"></i>edit</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa fa-sharp fa-light fa-trash" id="buttonDropdown_action"></i>Delete</a></li>
+    </ul>
+    </div>` 
     i++;
 }); 
 
 })
-function button(){
-    document.querySelector('#last').style.visibility = "visible";
-}
 
 
