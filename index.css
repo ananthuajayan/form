@@ -173,8 +173,8 @@ img,.full{
 .dotted-icon{
   padding: 0px 5px;
   background-color: aliceblue;
-  border-radius: 10px;
-  border: 1px solid rgb(56, 89, 89);
+  /* border-radius: 10px; */
+  /* border: 1px solid rgb(56, 89, 89); */
 }
 .table tr:last-child{
     border-bottom: none;
@@ -565,6 +565,9 @@ body{
  .selected{
     visibility: visible !important;
  }
+#change{
+    display: contents;
+}
 @media screen and (max-width:1200px) {
    
     .bg-white{
@@ -575,7 +578,7 @@ body{
         display: flex;
     }  
  }
- @media screen and (max-width:950px) {
+ /* @media screen and (max-width:950px) {
     .main-left{
         width: 100%;
         visibility: hidden;
@@ -649,4 +652,4 @@ body{
  
 
 
-
+ */

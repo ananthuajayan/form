@@ -9,9 +9,10 @@ fetch("http://localhost:3000/employees")
 
 const table = document.getElementById("table-back");
 table.innerHTML = "";
- 
 var i=1;
     employ.forEach((employ) => {
+    var id = employ.id;
+
     var people = table.insertRow();
     var slno = people.insertCell(); 
     slno.innerHTML = i;
@@ -37,12 +38,12 @@ var i=1;
 
     var dot = people.insertCell();
     dot.innerHTML = `<div class="dropdown">
-    <button class="btn dropdown-toggle dotted-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn dotted-icon" type="button" target="_blank" aria-expanded="false">
     <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
     
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#"><i class="fa fa-sharp fa-light fa-eye" id="buttonDropdown_action"></i>view</a></li>
+      <li><a class="dropdown-item" href="http://127.0.0.1:5501/view.html?id=${id}" target="_blank"><i class="fa fa-sharp fa-light fa-eye" id="buttonDropdown_action" ></i>view</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa fa-sharp fa-light fa-pen" id="buttonDropdown_action"></i>edit</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa fa-sharp fa-light fa-trash" id="buttonDropdown_action"></i>Delete</a></li>
     </ul>
@@ -51,5 +52,3 @@ var i=1;
 }); 
 
 })
-
-

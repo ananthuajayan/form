@@ -1,17 +1,3 @@
-// var fName = document.forms["modal"]["firstname"];
-// var sName = document.forms["modal"]["secondname"];
-// var userName = document.forms["modal"]["username"];
-// var password = document.forms["modal"]["password"];
-// var email = document.forms["modal"]["inputEmail4"];
-// var phone = document.forms["modal"]["inputtel4"];  var phoneRegx = /^[7-9][0-9]{9}$/;
-// var date = document.forms["modal"]["inputdate4"];
-// var Adress = document.forms["modal"]["inputAddress"]; var addressRegx = (/^[A-Za-z0-9]/);
-// var qualifications = document.forms["modal"]["qualifications"]; var qulificationRegx = (/^[A-Za-z0-9]/);
-// var country = document.forms["modal"]["country"];
-// var state = document.forms["modal"]["state"];
-// var city = document.forms["modal"]["city"];
-// var pin = document.forms["modal"]["pin"]; 
-
 function validate(){
     var fName = document.getElementById("firstname").value;
     var regfName =  (/^[A-Za-z]/);
