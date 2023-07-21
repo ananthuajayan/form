@@ -1,5 +1,4 @@
 
-
 fetch("http://localhost:3000/employees")
 .then((res) => res.json())
 .then((employ) =>{ console.log(employ);
@@ -38,14 +37,14 @@ var i=1;
 
     var dot = people.insertCell();
     dot.innerHTML = `<div class="dropdown">
-    <button class="btn dotted-icon" type="button" target="_blank" aria-expanded="false">
+    <button class="btn dropdown-toggle dotted-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
     
     </button>
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="http://127.0.0.1:5501/view.html?id=${id}" target="_blank"><i class="fa fa-sharp fa-light fa-eye" id="buttonDropdown_action" ></i>view</a></li>
-      <li><a class="dropdown-item" href="#"><i class="fa fa-sharp fa-light fa-pen" id="buttonDropdown_action"></i>edit</a></li>
-      <li><a class="dropdown-item" href="#"><i class="fa fa-sharp fa-light fa-trash" id="buttonDropdown_action"></i>Delete</a></li>
+      <button type="button" class="btn click" data-bs-toggle="modal" data-bs-target="#exampleModa"><i class="fa fa-sharp fa-light fa-pen" id="buttonDropdown_action"></i>edit</button>
+      <li><button class="dropdown-item"><i class="fa fa-sharp fa-light fa-trash" id="buttonDropdown_action"></i>Delete</button></li>
     </ul>
     </div>` 
     i++;

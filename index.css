@@ -120,6 +120,7 @@ img,.full{
     border-radius: 10px;
     padding: 10px;
     margin-top: 30px;
+   
 }
 .selecter{
     padding: 8px 15px 8px 15px;
@@ -222,6 +223,9 @@ img,.full{
 }
 .modal-footer{
     border-top: unset;
+}
+.modal.show .modal-dialog{
+    max-width: 900px;
 }
 
 
@@ -459,11 +463,12 @@ body{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    /* display: none; */
+    display: none;
+    position: fixed;
+    top: 200px;
+    left: 40%;
 }
-.sub-main-right{
-    /* display: none; */
-}
+
 .delete-head{
     display: flex;
     justify-content: space-between;
@@ -568,6 +573,14 @@ body{
 #change{
     display: contents;
 }
+.main-right{
+    min-height: 100vh;
+}
+#gard{
+    flex: 1;
+}
+
+
 @media screen and (max-width:1200px) {
    
     .bg-white{
