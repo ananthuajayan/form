@@ -1,6 +1,7 @@
 let para = new URLSearchParams(document.location.search);
 let id = para.get('id');
-console.log(id);
+console.log(id); 
+
 
 
 function  detailsEmployee(id) {
@@ -33,14 +34,14 @@ function  detailsEmployee(id) {
                 </div>
                 <div class="col form-coloumn">
                   <h6>Age</h6>
-                  <h5>parayooleda</h5>
+                  <h5>25</h5>
                 </div>
                 <div class="col form-coloumn">
                   <h6>Date of Birth</h6>
                   <h5>${employe.dob}</</h5>
                 </div>
               </div>
-              <div class="row sec">
+              <div class="row sec">  
                 <div class="col form-coloumn">
                   <h6>Mobile Number</h6>
                   <h5>${employe.phone}</h5>

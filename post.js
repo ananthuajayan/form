@@ -19,7 +19,7 @@ function validate(){
     }
 
     var userName = document.getElementById("username").value;
-    var  regusername = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})$/;
+    var  regusername = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})/;
     if(regusername.test(userName)){
         document.getElementById("username").style.border= "1px solid green";
     }else{
@@ -179,7 +179,7 @@ function formatchange(dob){
     let year=array[2];  
 
     
-    let dateformat=year + "-" + month + "-" + day;
+    let dateformat=day + "-" + month + "-" + year;
     return dateformat;
 }
 
@@ -216,4 +216,6 @@ fetch("http://localhost:3000/employees",{
 .then((staff) =>{ console.log(staff);})
   
 })
+
+//==============================================================================
 
