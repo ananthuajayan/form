@@ -1,5 +1,5 @@
 function editDetails(id){
-    alert(id);
+    // alert(id);
 console.log(id);
 fetch(`http://localhost:3000/employees/${id}`,{
 method:"get",   
@@ -21,6 +21,8 @@ method:"get",
     document.getElementById("edit-adress").value = employ.address;  
     document.getElementById("edit-pin").value = employ.pin;  
 })
+
+
 
 
 //form updation starts here.....
@@ -49,7 +51,7 @@ formUpdation.addEventListener('submit',(e)=>{
         password:document.getElementById('edit-password').value
         
     }
-    console.log(formupd);
+   
     fetch(`http://localhost:3000/employees/${id}`,{
         method:"PUT",
         headers:{
@@ -60,7 +62,7 @@ formUpdation.addEventListener('submit',(e)=>{
 )
 .then((res)=>res.json())
 .then(employ => {console.log(employ);})
-    
+fetchEmp(); 
 
 
 })

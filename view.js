@@ -8,7 +8,7 @@ function  detailsEmployee(id) {
     fetch(`http://localhost:3000/employees/${id}`, {
         method:"GET",
     })
-    .then(res => res.json())
+    .then(res => res.json()) 
     .then(employe => {
         console.log(employe);
         const employview = document.getElementById("employee-details");

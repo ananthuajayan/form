@@ -1,14 +1,10 @@
-
 function remove(){
-  document.getElementById("confirm-delete").style.visibility = "hidden";       
-} 
-function conDel(){
-  document.getElementById("confirm-delete").style.visibility = "hidden"; 
-  alert("employee deleted succesfully!")      
-} 
+  document.getElementById("confirm-delete").style.visibility = "hidden";
+}
 
 
-
+function fetchEmp(){
+  // alert("sdajdf");
 fetch("http://localhost:3000/employees")
 .then((res) => res.json())
 .then((employ) =>{ console.log(employ);
@@ -47,24 +43,39 @@ var i=1;
 
     var dot = people.insertCell();
     dot.innerHTML = `<div class="dropdown">
-    <button class="btn dropdown-toggle dotted-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn  dotted-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
     
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="http://127.0.0.1:5501/view.html?id=${id}" target="_blank"><i class="fa fa-sharp fa-light fa-eye" id="buttonDropdown_action" ></i>view</a></li>
-      <button type="button" class="btn click" data-bs-toggle="modal" onclick = "editDetails('${id}')" data-bs-target="#exampleModa"><i class="fa fa-sharp fa-light fa-pen" id="buttonDropdown_action"></i>edit</button>
-      <li><button class="dropdown-item"onclick = "deletion('${id}')"><i class="fa fa-sharp fa-light fa-trash" id="buttonDropdown_action"></i>Delete</button></li>
+      <li><a class="dropdown-item" href="http://127.0.0.1:5501/view.html?id=${id}"><i class="fa fa-sharp fa-light fa-eye" id="buttonDropdown_action" ></i>view</a></li>
+      <button type="button" class="btn click" data-bs-toggle="modal" data-bs-target="#exampleModa" onclick = "editDetails('${id}')"><i class="fa fa-sharp fa-light fa-pen" id="buttonDropdown_action"></i>edit</button>
+      <li><button class="dropdown-item" onclick = "deletion('${id}')"><i class="fa fa-sharp fa-light fa-trash" id="buttonDropdown_action"></i>Delete</button></li>
     </ul>
     </div>` 
     i++;
 }); 
 
 })
-function deletion(id){
-  document.getElementById("confirm-delete").style.visibility = "visible";  
-  fetch(`http://localhost:3000/employees/${id}`,{
-    method:"DELETE"
-  })
+}
 
+function deletion(id){  
+  document.getElementById('confirm-delete').style.visibility = "visible";
+  var del=document.getElementById("del")
+  var can = document.getElementById("can")
+  del.addEventListener('click',()=>{
+    fetch(`http://localhost:3000/employees/${id}`,{
+      method:"DELETE"
+    })
+    fetchEmp();
+    document.getElementById('confirm-delete').style.visibility = "hidden";
+  })
+  // can.addEventListener('click', ()=> {
+  //   document.getElementById('confirm-delete').style.visibility = " hidden";
+  // })
+ 
   }
+ 
+  
+
+  fetchEmp();

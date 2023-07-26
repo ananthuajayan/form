@@ -319,6 +319,9 @@ h6{
     overflow: auto;
     border: none;
 }
+#emp{
+    visibility: hidden;
+}
 .border{
     border: var(--main-color);
     border-radius: 15px;
@@ -464,10 +467,13 @@ body{
     flex-direction: column;
     gap: 15px;
     /* display: none; */
-    visibility: hidden;
+    /* visibility: hidden; */
     position: fixed;
     top: 200px;
     left: 40%;
+}
+#confirm-delete{
+    visibility:hidden ;
 }
 
 .delete-head{

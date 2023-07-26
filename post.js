@@ -6,7 +6,6 @@ function validate(){
     }else{
         document.getElementById("firstname").style.border= "1px solid red";
         document.getElementById("firstname").focus();
-        return false; 
     }
 
     var sName = document.getElementById("secondname").value;
@@ -110,6 +109,7 @@ var modal = document.getElementById("modal");
 
 modal.addEventListener('submit', (e) => {
     e.preventDefault();
+    // alert("employee added succesfully")
 
 var salutation = document.getElementById('salutation').value;
 //console.log(salutation);
@@ -173,13 +173,12 @@ var inputdate4 = formatchange(date);
 
 
 function formatchange(dob){
-    const array=dob.split("-");
+    const array=dob.split("-"); 
     let day=array[0];
     let month=array[1];
     let year=array[2];  
 
-    
-    let dateformat=day + "-" + month + "-" + year;
+    let dateformat=year + "-" + month + "-" + day;
     return dateformat;
 }
 
@@ -210,11 +209,12 @@ fetch("http://localhost:3000/employees",{
         'content-type':'application/json'
     },
     body:JSON.stringify(staff)
+    
  })
 
 .then(res => res.json())
 .then((staff) =>{ console.log(staff);})
-  
+fetchEmp();
 })
 
 //==============================================================================
