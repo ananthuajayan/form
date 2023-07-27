@@ -67,7 +67,8 @@ var i=1;
 function deletion(id){  
   document.getElementById('confirm-delete').style.visibility = "visible";
   var del=document.getElementById("del")
-  var can = document.getElementById("can")
+  // var can = document.getE 
+  lentById("can")
   del.addEventListener('click',()=>{
     fetch(`http://localhost:3000/employees/${id}`,{
       method:"DELETE"

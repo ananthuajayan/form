@@ -1,3 +1,5 @@
+
+  
 function validate(){
     var fName = document.getElementById("firstname").value;
     var regfName =  (/^[A-Za-z]/);

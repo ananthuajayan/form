@@ -1,3 +1,7 @@
+function refreash(){
+    location.reload();
+}
+
 function editDetails(id){
 console.log(id);
 fetch(`http://localhost:3000/employees/${id}`,{
