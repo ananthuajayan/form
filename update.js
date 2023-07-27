@@ -1,5 +1,4 @@
 function editDetails(id){
-    // alert(id);
 console.log(id);
 fetch(`http://localhost:3000/employees/${id}`,{
 method:"get",   
@@ -29,7 +28,7 @@ method:"get",
 
 const formUpdation = document.getElementById('edit-form');
 formUpdation.addEventListener('submit',(e)=>{
-    alert("employee updated succesfuly");
+
     e.preventDefault(); 
     // console.log(formUpdation);
     

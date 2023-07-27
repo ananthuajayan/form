@@ -12,7 +12,8 @@ function  detailsEmployee(id) {
     .then(employe => {
         console.log(employe);
         const employview = document.getElementById("employee-details");
-        employview.innerHTML = `
+        employview.innerHTML = ` 
+        
         <div class="sub-deletion-form">
         <div class="background">
           <img src="img/Background.png" alt="">

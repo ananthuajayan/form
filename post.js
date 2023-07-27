@@ -110,6 +110,7 @@ var modal = document.getElementById("modal");
 modal.addEventListener('submit', (e) => {
     e.preventDefault();
     // alert("employee added succesfully")
+    
 
 var salutation = document.getElementById('salutation').value;
 //console.log(salutation);

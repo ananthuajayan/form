@@ -1,13 +1,18 @@
 function remove(){
   document.getElementById("confirm-delete").style.visibility = "hidden";
 }
+function alertz(){
+  document.getElementById("zero").style.visibility = "hidden";
+}
+function alertvisible(){
+  document.getElementById("zero").style.visibility = "visible";
+}
 
 
 function fetchEmp(){
-  // alert("sdajdf");
 fetch("http://localhost:3000/employees")
 .then((res) => res.json())
-.then((employ) =>{ console.log(employ);
+.then((employ      ) =>{ console.log(employ);
 
 
  

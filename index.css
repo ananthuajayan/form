@@ -227,6 +227,15 @@ img,.full{
 .modal.show .modal-dialog{
     max-width: 900px;
 }
+.form-modal{
+    visibility: hidden;
+    z-index: 10000;
+}
+#black{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
 
 
 

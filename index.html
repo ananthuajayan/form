@@ -416,9 +416,7 @@
   </div>
 </div>
   <!-- <b--------------------------------------------------r> -->
-   
-        
-                    
+  
 
  <!-- ------------------------------------<br>----------------------------- -->
  
@@ -564,7 +562,7 @@
             </div>
           </div>
           <button type="button" class="btn text-primary me-sm-2" data-bs-dismiss="modal">Cancel</button>
-          <button type="submit" class="btn btn-primary py-3" >Save changes</button>
+          <button type="submit" class="btn btn-primary py-3"  data-toggle="modal" data-target="#exampleMod" onclick="alertvisible()" >Save changes</button>
         
     </div>
 </form>
@@ -589,7 +587,14 @@
           </div>
         </div>
       </div>
-    
+        <div class="form-modal" id="zero" >
+          <p>Employee uploaded succesfully!</p>
+          <div class="delete-button">
+            <button id="black"  onclick="alertz()">ok</button>
+            
+          </div>
+        </div>
+      
 
 <!------------------------------------- <br>-------------------------- --> 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
