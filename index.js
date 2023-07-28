@@ -7,12 +7,15 @@ function alertz(){
 function alertvisible(){
   document.getElementById("zero").style.visibility = "visible";
 }
+function refreash(){
+  location.reload();
+}
 
 
 function fetchEmp(){
 fetch("http://localhost:3000/employees")
 .then((res) => res.json())
-.then((employ      ) =>{ console.log(employ);
+.then((employ   ) =>{ console.log(employ);
 
 
  
@@ -22,31 +25,32 @@ table.innerHTML = "";
 var i=1;
     employ.forEach((employ) => {
     var id = employ.id;
-
-    var people = table.insertRow();
-    var slno = people.insertCell(); 
+      
+    var row = table.insertRow();
+    row.id = id;
+    var slno = row.insertCell(); 
     slno.innerHTML = i;
     
 
-    var name = people.insertCell();
+    var name = row.insertCell();
     name.innerHTML = employ.firstName +" "+ employ.lastName;
 
-    var email = people.insertCell();
+    var email = row.insertCell();
     email.innerHTML = employ.email;
 
-    var phone = people.insertCell();
+    var phone = row.insertCell();
     phone.innerHTML = employ.phone;
 
-    var gender = people.insertCell();
+    var gender = row.insertCell();
     gender.innerHTML = employ.gender;
 
-    var state = people.insertCell();
+    var state = row.insertCell();
     state.innerHTML = employ.state;
 
-    var country = people.insertCell();
+    var country = row.insertCell();
     country.innerHTML = employ.country;
 
-    var dot = people.insertCell();
+    var dot = row.insertCell();
     dot.innerHTML = `<div class="dropdown">
     <button class="btn  dotted-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     <td class="dotted-icon"><i class="fa-solid fa-ellipsis"></i></td>
@@ -67,18 +71,16 @@ var i=1;
 function deletion(id){  
   document.getElementById('confirm-delete').style.visibility = "visible";
   var del=document.getElementById("del")
-  // var can = document.getE 
-  lentById("can")
   del.addEventListener('click',()=>{
     fetch(`http://localhost:3000/employees/${id}`,{
       method:"DELETE"
+    
     })
+
     fetchEmp();
     document.getElementById('confirm-delete').style.visibility = "hidden";
   })
-  // can.addEventListener('click', ()=> {
-  //   document.getElementById('confirm-delete').style.visibility = " hidden";
-  // })
+  
  
   }
  

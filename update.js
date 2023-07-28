@@ -1,6 +1,3 @@
-function refreash(){
-    location.reload();
-}
 
 function editDetails(id){
 console.log(id);

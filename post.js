@@ -8,6 +8,8 @@ function validate(){
     }else{
         document.getElementById("firstname").style.border= "1px solid red";
         document.getElementById("firstname").focus();
+        return false;
+
     }
 
     var sName = document.getElementById("secondname").value;
@@ -17,6 +19,8 @@ function validate(){
     }else{
         document.getElementById("secondname").style.border= "1px solid red";
         document.getElementById("secondname").focus();
+        return false;
+
     }
 
     var userName = document.getElementById("username").value;
@@ -26,12 +30,15 @@ function validate(){
     }else{
         document.getElementById("username").style.border= "1px solid red";
         document.getElementById("username").focus();
+        return false;
+
     }
     
     var password = document.getElementById("password").value;
     if(password==""){
         document.getElementById("password").style.border= "1px solid red";
         document.getElementById("password").focus();
+        return false;
     }else{
         document.getElementById("password").style.border= "1px solid green";
         
@@ -44,6 +51,8 @@ function validate(){
     }else{
         document.getElementById("inputEmail4").style.border= "1px solid red";
         document.getElementById("inputEmail4").focus();
+        return false;
+
     }
 
     var phone = document.getElementById("inputtel4").value;
@@ -53,12 +62,15 @@ function validate(){
     }else{
         document.getElementById("inputtel4").style.border= "1px solid red";
         document.getElementById("inputtel4").focus();
+        return false;
+
     }
 
     var date = document.getElementById("inputdate4").value;
     if(date==""){
         document.getElementById("inputdate4").style.border= "1px solid red";
         document.getElementById("inputdate4").focus();
+        return false;
     }else{
         document.getElementById("inputdate4").style.border= "1px solid green";
         
@@ -71,6 +83,8 @@ function validate(){
     }else{
         document.getElementById("inputAddress").style.border= "1px solid red";
         document.getElementById("inputAddress").focus();
+        return false;
+
     }
 
     var qualifications = document.getElementById("qualifications").value;
@@ -80,25 +94,31 @@ function validate(){
     }else{
         document.getElementById("qualifications").style.border= "1px solid red";
         document.getElementById("qualifications").focus();
+        return false;
+
     }
 
     var city = document.getElementById("city").value;
     var regcity =  (/^[A-Za-z]/);
     if(regcity.test(city)){
         document.getElementById("city").style.border= "1px solid green";
+        
     }else{
         document.getElementById("city").style.border= "1px solid red";
         document.getElementById("city").focus();
+        return false;
     }
 
     var pin = document.getElementById("pin").value;
     if(pin==""){
         document.getElementById("pin").style.border= "1px solid red";
         document.getElementById("pin").focus();
+        return false;
     }else{
         document.getElementById("pin").style.border= "1px solid green";
         
     }
+    // refreash();
 }
 
 
